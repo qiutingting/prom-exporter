@@ -6,9 +6,9 @@ pipeline{
           steps{
               sh """
                    mvn sonar:sonar \
-  -Dsonar.projectKey=tech \
-  -Dsonar.host.url=http://k8s.testing-studio.com:9000 \
-  -Dsonar.login=52358eb3e1c840ae03abbd18275023eed92f6d9e
+  -Dsonar.projectKey=exporter3 \
+  -Dsonar.host.url=http://60.205.224.183:9000 \
+  -Dsonar.login=56f10a494ae1a4179460b6ce86c1eb0b069b776f
               """
           }
         }
