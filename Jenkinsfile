@@ -6,9 +6,9 @@ pipeline{
           steps{
               sh """
                    mvn sonar:sonar \
-  -Dsonar.projectKey=exporter3 \
+  -Dsonar.projectKey=exporter \
   -Dsonar.host.url=http://60.205.224.183:9000 \
-  -Dsonar.login=56f10a494ae1a4179460b6ce86c1eb0b069b776f
+  -Dsonar.login=3f653b9e77c3bd93666e3ed6bc9c86421f8cb1db
               """
           }
         }
@@ -42,9 +42,9 @@ pipeline{
         stage('部署环境'){
             steps{
                 sh """
-                    sudo docker pull localhost:5000/java-exporter
+                    sudo docker pull 60.205.224.183:5000/java-exporter
                     sudo docker rm -f java-exporter || echo 'There is no java-exporter running'
-                    sudo docker run --name java-exporter -d -p 8999:1234 localhost:5000/java-exporter
+                    sudo docker run --name java-exporter -d -p 8999:1234 60.205.224.183:5000/java-exporter
                 """
                 }
             }
