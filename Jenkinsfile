@@ -2,6 +2,14 @@ pipeline{
     agent { label 'tech' }
     stages{
 
+         stage('执行单侧'){
+            steps{
+                sh """
+                    mvn clean test -Dmaven.test.failure.ignore=true
+                """
+                }
+        }
+
         stage('代码扫描'){
           steps{
               sh """
@@ -11,14 +19,6 @@ pipeline{
   -Dsonar.login=3f653b9e77c3bd93666e3ed6bc9c86421f8cb1db
               """
           }
-        }
-
-        stage('执行单侧'){
-            steps{
-                sh """
-                    mvn clean test -Dmaven.test.failure.ignore=true
-                """
-                }
         }
 
         stage('打包推送'){
