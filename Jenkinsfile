@@ -32,8 +32,8 @@ pipeline{
         stage('编译镜像'){
             steps{
                 sh """
-                    sudo docker build -t localhost:5000/java-exporter .
-                    sudo docker push localhost:5000/java-exporter
+                    sudo docker build -t 60.205.224.183:5000/java-exporter .
+                    sudo docker push 60.205.224.183:5000/java-exporter
                 """
                 }
         }
