@@ -1,5 +1,5 @@
 pipeline{
-    agent { label 'tech' }
+    agent { label 'tech2' }
     stages{
 
          stage('执行单侧'){
