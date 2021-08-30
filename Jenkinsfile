@@ -18,9 +18,9 @@ pipeline{
                    -Dmaven.test.failure.ignore=true \
                    -Dmaven.test.skip=false \
                    sonar:sonar \
-  -Dsonar.projectKey=exporter \
+  -Dsonar.projectKey=prom-exporter \
   -Dsonar.host.url=http://60.205.224.183:9000 \
-  -Dsonar.login=3f653b9e77c3bd93666e3ed6bc9c86421f8cb1db
+  -Dsonar.login=6e3cbd1897e3f37cb8a8fb6eca402603e83db08e
               """
           }
         }
