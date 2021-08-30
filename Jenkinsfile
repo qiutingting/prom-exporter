@@ -10,17 +10,6 @@ pipeline{
                 }
         }
 
-        stage('代码扫描'){
-          steps{
-              sh """
-                  mvn sonar:sonar \
-  -Dsonar.projectKey=prom-exporter \
-  -Dsonar.host.url=http://60.205.224.183:9000 \
-  -Dsonar.login=6e3cbd1897e3f37cb8a8fb6eca402603e83db08e
-              """
-          }
-        }
-
         stage('打包推送'){
             steps{
                   sh """
