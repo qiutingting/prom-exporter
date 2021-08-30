@@ -178,9 +178,9 @@
     <!-- 设置deploy的地址 -->
     <distributionManagement>
     <repository>
-        <id>tech-snapshots</id>                    <!--库的ID-->
+        <id>snapshot</id>                    <!--库的ID-->
         <name>user release resp</name>   <!--库的名字-->
-        <url>http://k8s.testing-studio.com:8081/repository/maven-snapshots/</url>
+        <url>http://60.205.224.183:8082/repository/java-snapshot/</url>
     </repository>
     </distributionManagement>
 
