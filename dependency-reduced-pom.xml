@@ -66,9 +66,9 @@
   </build>
   <distributionManagement>
     <repository>
-      <id>tech-snapshots</id>
+      <id>snapshot</id>
       <name>user release resp</name>
-      <url>http://k8s.testing-studio.com:8081/repository/maven-snapshots/</url>
+      <url>http://60.205.224.183:8082/repository/java-snapshot/</url>
     </repository>
   </distributionManagement>
 </project>
